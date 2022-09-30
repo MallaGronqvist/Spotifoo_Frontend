@@ -1,0 +1,18 @@
+/* Colors */
+
+:root {
+    --gray-darkest: #121212;
+    --gray-dark: #242424;
+    --gray-ligth: #A3A3A3;
+    --green: #1DB954; 
+}
+
+/* Spacing */
+
+:root {
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 32px;
+}
+
+

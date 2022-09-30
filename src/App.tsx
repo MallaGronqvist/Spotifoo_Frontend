@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './assets/logo.svg';
-import './styles/App.css';
+import { Key, useEffect, useState } from "react";
+import Card from "./components/Card";
 
-function App() {
+import "./styles/style.css";
+import NavigationBar from "./components/NavigationBar";
+
+
+export default function App() {
+  // Get songs somehow and give them to useState as a JSON
+  const [songs, setSongs] = useState(null);
+
+/*
+useEffect(() => {
+  fetch(
+    'localhost:8080/music?search=Andy you are'
+    ).then((response) => response.json())
+    .then(setSongs);
+}, []
+)
+if(songs) {
+  Cards = songs.map((item: { id: Key | null | undefined; title: string; })=> (
+    <Card key = {item.id} title = {item.title}/>
+    ));
+};
+
+*/
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar />
+      <h1> Test title </h1>
+
+      <Card title="Enter artist name here" />
     </div>
   );
 }
-
-export default App;

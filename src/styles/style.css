@@ -1,0 +1,37 @@
+@import "./variables.css";
+@import "./fonts.css";
+
+.App {
+  background-color: var(--gray-darkest);
+  font-family: "Lato", sans-serif;
+}
+
+.logo {
+  width: 200px;
+}
+
+body {
+  margin: 0;
+}
+
+.navBar {
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 720px;
+}
+
+.homeIcon {
+  color: white;
+  background-color: white;
+  position: absolute;
+  width: 24px;
+  height: 21.34px;
+}
+
+.button {
+  background-color: black;
+  color: white;
+}
