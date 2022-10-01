@@ -8,18 +8,18 @@ export default function NavigationBar() {
       <div className="NavBackGround">
         <img className="logo" src={Logo} />
 
-        <button className="HomeButton">
+        <button id="HomeButton">
           <svg className="Icon">
             <path className="Vector" d="../assets/home.svg" />
           </svg>
-          <p className="HomeLabel">Home</p>
+          <p id="HomeLabel">Home</p>
         </button>
 
-        <button className="SearchButton">
+        <button id="SearchButton">
           <svg className="Icon">
             <path className="Vector" d="../assets/search.svg" />
           </svg>
-          <p className="SearchLabel">Search</p>
+          <p id="SearchLabel">Search</p>
         </button>
       </div>
     </nav>

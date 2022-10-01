@@ -12,7 +12,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.HomePage {
+#HomePage {
   grid-column: 2 / 3;
   background-color: var(--gray-darkest);
   width: 1280px;
@@ -33,7 +33,7 @@ body {
   bottom: 91.11%;
 }
 
-.NavBar {
+#NavBar {
   background-color: black;
   grid-column: 1 / 2;
   left: 0;
@@ -43,7 +43,7 @@ body {
   position: fixed;
 }
 
-.HomeButton {
+#HomeButton {
   background-color: transparent;
   width: Hug (84px);
   height: Hug (24px);
@@ -60,7 +60,7 @@ body {
   bottom: 84.44%;
 }
 
-.SearchButton {
+#SearchButton {
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -95,7 +95,7 @@ body {
   bottom: 4.84%;
 }
 
-.MusicPlayer {
+#MusicPlayer {
   grid-column: 1 / 4;
   background-color: var(--gray-dark);
   width: 1280px;
@@ -105,4 +105,21 @@ body {
   top: 624px;
   bottom: 0%;
   position: fixed;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+
+  position: absolute;
+  width: 224px;
+  height: 259px;
+  left: 232px;
+  top: 77px;
+
+  background: var(--gray-dark);
+  border-radius: 8px;
 }

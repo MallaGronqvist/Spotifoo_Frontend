@@ -4,7 +4,7 @@ interface iProps {
 }
 
 export default function Card({title}: iProps) {
-  return <article>
+  return <article className="Card">
     <h3>{title}</h3>
   </article>;
 }

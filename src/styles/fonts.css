@@ -29,7 +29,7 @@ p {
   font-size: 14px;
 }
 
-.HomeLabel {
+#HomeLabel {
   width: 44px;
   height: 19px;
 
@@ -46,7 +46,7 @@ p {
   flex-grow: 0;
 }
 
-.SearchLabel {
+#SearchLabel {
   width: 48px;
   height: 19px;
 
@@ -63,7 +63,7 @@ p {
   flex-grow: 0;
 }
 
-.Artist-title {
+#Artist-title {
   position: absolute;
   width: 61px;
   height: 29px;
@@ -73,7 +73,7 @@ p {
   line-height: 29px;
 }
 
-.Albums-title {
+#Albums-title {
   position: absolute;
   width: 81px;
   height: 29px;
@@ -83,7 +83,7 @@ p {
   line-height: 29px;
 }
 
-.Genres-title {
+#Genres-title {
   position: absolute;
   width: 76px;
   height: 29px;
