@@ -19,6 +19,8 @@ body {
   height: 1945px;
   left: 0px;
   top: 32px;
+  overflow: auto;
+  color: white;
 }
 
 .logo {
@@ -32,17 +34,16 @@ body {
 }
 
 .NavBar {
-  background-color: blue;
+  background-color: black;
   grid-column: 1 / 2;
-  position: absolute;
   left: 0;
   top: 0;
   width: 200px;
   height: 720px;
+  position: fixed;
 }
 
-.Button {
-  border: 1;
+.HomeButton {
   background-color: transparent;
   width: Hug (84px);
   height: Hug (24px);
@@ -59,12 +60,28 @@ body {
   bottom: 84.44%;
 }
 
+.SearchButton {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  left: 16%;
+  right: 40%;
+  top: 17.78%;
+  bottom: 78.89%;
+}
+
 .Icon {
   width: 24px;
   height: 24px;
   flex: none;
   order: 0;
   flex-grow: 0;
+  background-color: aliceblue;
 }
 
 .Vector {
@@ -76,7 +93,6 @@ body {
   right: 0%;
   top: 6.25%;
   bottom: 4.84%;
-  background: #ffffff;
 }
 
 .MusicPlayer {
@@ -86,6 +102,7 @@ body {
   height: 96px;
   left: 0%;
   right: 0%;
-  top: 0%;
+  top: 624px;
   bottom: 0%;
+  position: fixed;
 }

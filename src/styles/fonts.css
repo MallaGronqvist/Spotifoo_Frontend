@@ -29,24 +29,66 @@ p {
   font-size: 14px;
 }
 
-.Label {
-    width: 44px;
-height: 19px;
+.HomeLabel {
+  width: 44px;
+  height: 19px;
 
-font-family: 'Lato';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 
-/* White */
+  color: #ffffff;
 
-color: #FFFFFF;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
 
+.SearchLabel {
+  width: 48px;
+  height: 19px;
 
-/* Inside auto layout */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 
-flex: none;
-order: 1;
-flex-grow: 0;
+  color: #a3a3a3;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.Artist-title {
+  position: absolute;
+  width: 61px;
+  height: 29px;
+  left: 232px;
+  top: 32px;
+
+  line-height: 29px;
+}
+
+.Albums-title {
+  position: absolute;
+  width: 81px;
+  height: 29px;
+  left: 232px;
+  top: 659px;
+
+  line-height: 29px;
+}
+
+.Genres-title {
+  position: absolute;
+  width: 76px;
+  height: 29px;
+  left: 232px;
+  top: 1545px;
+
+  line-height: 29px;
 }

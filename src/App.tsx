@@ -32,7 +32,15 @@ if(songs) {
       <NavigationBar />
       </div>
       <main className="HomePage">
-        // Sections with cards here.
+        <section>
+          <h2 className="Artist-title">Artist</h2>
+        </section>
+        <section>
+          <h2 className="Albums-title">Albums</h2>
+        </section>
+        <section>
+          <h2 className="Genres-title">Genres</h2>
+        </section>
       </main>
       <div className = "MusicPlayer">HTML Music Player here</div>
     </div>

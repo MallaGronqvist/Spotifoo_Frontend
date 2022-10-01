@@ -4,7 +4,7 @@ interface iProps {
 }
 
 export default function Button({path, label}: iProps) {
-    return <button className="Button">
+    return <button>
         <svg className = "Icon">
             <path className = "Vector" d = {path}/>
         </svg>
