@@ -1,21 +1,39 @@
 @import "./variables.css";
 @import "./fonts.css";
 
-.App {
-  background-color: var(--gray-darkest);
-  font-family: "Lato", sans-serif;
-}
-
-.logo {
-  width: 200px;
-}
-
 body {
+  display: grid;
+  height: 100vh;
+  grid-template: auto 1fr auto / auto 1fr auto;
   margin: 0;
 }
 
-.navBar {
-  background-color: black;
+.App {
+  font-family: "Lato", sans-serif;
+}
+
+.HomePage {
+  grid-column: 2 / 3;
+  background-color: var(--gray-darkest);
+  width: 1280px;
+  height: 1945px;
+  left: 0px;
+  top: 32px;
+}
+
+.logo {
+  width: 117.33px;
+  height: 32;
+  position: absolute;
+  left: 16%;
+  right: 25.33%;
+  top: 4.44%;
+  bottom: 91.11%;
+}
+
+.NavBar {
+  background-color: blue;
+  grid-column: 1 / 2;
   position: absolute;
   left: 0;
   top: 0;
@@ -23,15 +41,51 @@ body {
   height: 720px;
 }
 
-.homeIcon {
-  color: white;
-  background-color: white;
+.Button {
+  border: 1;
+  background-color: transparent;
+  width: Hug (84px);
+  height: Hug (24px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
   position: absolute;
-  width: 24px;
-  height: 21.34px;
+  left: 16%;
+  right: 42%;
+  top: 12.22%;
+  bottom: 84.44%;
 }
 
-.button {
-  background-color: black;
-  color: white;
+.Icon {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.Vector {
+  width: 24px;
+  height: 21.34px;
+  top: 1.5px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 6.25%;
+  bottom: 4.84%;
+  background: #ffffff;
+}
+
+.MusicPlayer {
+  grid-column: 1 / 4;
+  background-color: var(--gray-dark);
+  width: 1280px;
+  height: 96px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
 }

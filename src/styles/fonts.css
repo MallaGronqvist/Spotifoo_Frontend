@@ -28,3 +28,25 @@ p {
   margin-bottom: 0;
   font-size: 14px;
 }
+
+.Label {
+    width: 44px;
+height: 19px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+/* White */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}

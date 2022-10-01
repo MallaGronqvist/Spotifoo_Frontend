@@ -28,10 +28,14 @@ if(songs) {
 
   return (
     <div className="App">
+      <div className="NavBar">
       <NavigationBar />
-      <h1> Test title </h1>
-
-      <Card title="Enter artist name here" />
+      </div>
+      <main className="HomePage">
+        // Sections with cards here.
+      </main>
+      <div className = "MusicPlayer">HTML Music Player here</div>
     </div>
   );
+
 }
