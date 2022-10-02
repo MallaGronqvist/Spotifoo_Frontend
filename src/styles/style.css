@@ -123,3 +123,16 @@ body {
   background: var(--gray-dark);
   border-radius: 8px;
 }
+
+#cardList {
+    position: absolute;
+    left: 232px;
+    color: white;
+}
+
+.SongTitle {
+    position: absolute;
+    left: 232px;
+    color: white;
+}
+
