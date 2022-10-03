@@ -34,6 +34,7 @@ export default function Card({ title, pathToAlbum }: iProps) {
         width={192}
         height={192}
       ></img>
+      <h3>{title}</h3>
     </article>
   );
 }

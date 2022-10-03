@@ -22,6 +22,7 @@ export default function NavigationBar() {
           <p id="SearchLabel">Search</p>
         </button>
       </div>
+
     </nav>
   );
 }

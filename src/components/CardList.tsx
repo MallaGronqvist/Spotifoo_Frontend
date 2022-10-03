@@ -23,7 +23,7 @@ const CardList: React.FC<IProps> = ({ songs }) => {
         var artistName: string = song.artist;
         var pathToAlbum: string = "";
         if (song.pathToAlbum) {
-          pathToAlbum = song.pathToAlbum;
+            pathToAlbum = song.pathToAlbum;
         }
 
         data.push([artistName, pathToAlbum]);
@@ -31,28 +31,7 @@ const CardList: React.FC<IProps> = ({ songs }) => {
     });
   };
 
-  const renderList = (): JSX.Element[] => {
-    return songs.map((song) => {
-      return (
-        <li key={song.id}>
-          <p className="SongTitle">{song.title}</p>
-        </li>
-      );
-    });
-  };
-
   const renderArtists = (): JSX.Element[] => {
-    getArtists();
-    return artists.map((artist, index) => {
-      return (
-        <li key= {index}>
-          <p className="SongTitle">{artist}</p>
-        </li>
-      );
-    });
-  };
-
-  const renderArtistsAndPaths = (): JSX.Element[] => {
     getArtists();
     return data.map((artist, index) => {
       return (
@@ -65,7 +44,7 @@ const CardList: React.FC<IProps> = ({ songs }) => {
     });
   };
 
-  return <div id= "Card-container"> {renderArtistsAndPaths()} </div>;
+  return <div id= "Card-container"> {renderArtists()} </div>;
 };
 
 export default CardList;
