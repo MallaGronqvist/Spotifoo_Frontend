@@ -12,24 +12,21 @@ interface IProps {
 }
 
 const CardList: React.FC<IProps> = ({ songs }) => {
-    let artists: Array<string> = [];
+  let artists: Array<string> = [];
 
-    const getArtists = () => {
-      songs.map((song) =>{
-        if(! (artists.includes(song.artist))){
-            artists.push(song.artist);
-        }
+  const getArtists = () => {
+    songs.map((song) => {
+      if (!artists.includes(song.artist)) {
+        artists.push(song.artist);
       }
-      ) 
-    }
+    });
+  };
 
   const renderList = (): JSX.Element[] => {
     return songs.map((song) => {
       return (
         <li key={song.id}>
-          <p className = "SongTitle">
-            {song.title}
-          </p>
+          <p className="SongTitle">{song.title}</p>
         </li>
       );
     });
@@ -38,22 +35,15 @@ const CardList: React.FC<IProps> = ({ songs }) => {
   const renderArtists = (): JSX.Element[] => {
     getArtists();
     return artists.map((artist) => {
-        return (
-          <li>
-            <p className = "SongTitle">
-              {artist}
-            </p>
-          </li>
-        );
-      });
-  }
+      return (
+        <li>
+          <p className="SongTitle">{artist}</p>
+        </li>
+      );
+    });
+  };
 
-  return (
-
-  <ul>
-    {renderArtists()}
-  </ul>
-  ) 
+  return <ul>{renderArtists()}</ul>;
 };
 
 export default CardList;
