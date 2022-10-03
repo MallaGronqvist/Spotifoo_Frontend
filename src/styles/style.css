@@ -112,27 +112,53 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
-  gap: 16px;
-
-  position: absolute;
   width: 224px;
   height: 259px;
-  left: 232px;
-  top: 77px;
 
   background: var(--gray-dark);
+  border: 2px dashed;
+  border-color: red;
   border-radius: 8px;
 }
 
 #cardList {
-    position: absolute;
-    left: 232px;
-    color: white;
+  position: absolute;
+  left: 232px;
+  color: white;
 }
 
 .SongTitle {
-    position: absolute;
-    left: 232px;
-    color: white;
+  position: absolute;
+  left: 232px;
+  color: white;
 }
 
+#Card-container {
+  left: 232px;
+  display: grid;
+  grid-gap: 16px;
+
+  grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+}
+
+#Artist-section {
+  position: absolute;
+  width: 944px;
+  height: 579px;
+  left: 232px;
+  top: 32px;
+}
+
+#CardsDiv {
+  position: absolute;
+  width: 944px;
+  height: 534px;
+  left: 0px;
+  top: 45px;
+}
+
+#Card-image {
+  width: 192px;
+  height: 192px;
+  border-radius: 8px;
+}

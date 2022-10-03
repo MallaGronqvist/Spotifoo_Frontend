@@ -31,9 +31,9 @@ export default function App() {
         <NavigationBar />
       </div>
       <main id="HomePage">
-        <section>
+        <section id= "Artist-section">
           <h2 id="Artist-title">Artist</h2>
-          <div>
+          <div id="CardsDiv">
             <CardList songs={songs} />
           </div>
         </section>
