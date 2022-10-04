@@ -3,26 +3,26 @@ import HomeIcon from "../assets/home.svg";
 import Button from "./Button";
 
 export default function NavigationBar() {
-  return (
-    <nav role="navigation" aria-label="navigation menu">
-      <div className="NavBackGround">
-        <img className="logo" src={Logo} />
 
-        <button id="HomeButton">
-          <svg className="Icon">
-            <path className="Vector" d="../assets/home.svg" />
-          </svg>
-          <p id="HomeLabel">Home</p>
-        </button>
+    return (
+      <nav role="navigation" aria-label="navigation menu">
+        <div className="NavBackGround">
+          <img className="logo" src={Logo} />
 
-        <button id="SearchButton">
-          <svg className="Icon">
-            <path className="Vector" d="../assets/search.svg" />
-          </svg>
-          <p id="SearchLabel">Search</p>
-        </button>
-      </div>
+          <button id="HomeButton">
+            <svg className="Icon">
+                <img src={HomeIcon} />
+            </svg>
+            <p id="HomeLabel">Home</p>
+          </button>
 
-    </nav>
-  );
-}
+          <button id="SearchButton">
+            <svg className="Icon"></svg>
+            <p id="SearchLabel">Search</p>
+          </button>
+        </div>
+      </nav>
+    );
+};
+
+

@@ -1,18 +1,11 @@
-import React from "react";
+import iSong from "../interfaces/iSong";
 import Card from "./Card";
 
-interface IProps {
-  songs: {
-    id: string;
-    title: string;
-    artist: string;
-    album: string;
-    pathTomusic?: string;
-    pathToAlbum?: string;
-  }[];
+interface iProps {
+  songs: iSong[]
 }
 
-const CardList: React.FC<IProps> = ({ songs }) => {
+export default function CardList ({ songs }:iProps) {
   let artists: Array<string> = [];
   let data: Array<[string, string]> = [];
 
@@ -23,7 +16,7 @@ const CardList: React.FC<IProps> = ({ songs }) => {
         var artistName: string = song.artist;
         var pathToAlbum: string = "";
         if (song.pathToAlbum) {
-            pathToAlbum = song.pathToAlbum;
+          pathToAlbum = song.pathToAlbum;
         }
 
         data.push([artistName, pathToAlbum]);
@@ -31,20 +24,19 @@ const CardList: React.FC<IProps> = ({ songs }) => {
     });
   };
 
-  const renderArtists = (): JSX.Element[] => {
+  function renderArtists (){
     getArtists();
     return data.map((artist, index) => {
       return (
         <>
-        <div key= {index}>
-          <Card key = {index} title={artist[0]} pathToAlbum={artist[1]} />
-        </div>
+          <div key={index}>
+            <Card key={index} title={artist[0]} pathToAlbum={artist[1]} />
+          </div>
         </>
       );
     });
   };
 
-  return <div id= "Card-container"> {renderArtists()} </div>;
+  return <div id="Card-container"> {renderArtists()} </div>;
 };
 
-export default CardList;

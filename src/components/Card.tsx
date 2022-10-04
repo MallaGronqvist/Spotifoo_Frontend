@@ -7,33 +7,21 @@ interface iProps {
 }
 
 export default function Card({ title, pathToAlbum }: iProps) {
-  const [image, setImage] = useState("");
-  let imageSource: string = "http://localhost:8080".concat(pathToAlbum);
 
-  useEffect(() => {
-    fetch(imageSource)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Image not found");
-        }
-        return response;
-      })
-      .then((data) => setImage(data.url))
-      .catch((error) => {
-        console.log(error);
-        setImage(PlaceHolder);
-      });
-  }, []);
+
+  // Properties
+  const imageSource: string = "http://localhost:8080".concat(pathToAlbum);
 
   return (
     <article className="Card">
       <img
         className="Card-image"
-        src={image}
+        src={imageSource}
         alt="Album art"
+        onError={(event) => (event.currentTarget.src = PlaceHolder)}
         width={192}
         height={192}
-      ></img>
+      />
       <h3>{title}</h3>
     </article>
   );
