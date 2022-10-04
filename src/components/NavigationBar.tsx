@@ -5,20 +5,22 @@ import Button from "./Button";
 export default function NavigationBar() {
 
     return (
-      <nav role="navigation" aria-label="navigation menu">
-        <div className="NavBackGround">
+      <nav id="navBar" role="navigation" aria-label="navigation menu">
+        <div className="navBackGround">
           <img className="logo" src={Logo} />
 
-          <button id="HomeButton">
-            <svg className="Icon">
-                <img src={HomeIcon} />
-            </svg>
-            <p id="HomeLabel">Home</p>
+          <button id="homeButton">
+          <svg>
+           
+          </svg>
+                 <embed className="vector" src= {HomeIcon} />
+            
+            <p id="homeLabel">Home</p>
           </button>
 
-          <button id="SearchButton">
-            <svg className="Icon"></svg>
-            <p id="SearchLabel">Search</p>
+          <button id="searchButton">
+            <svg className="icon"></svg>
+            <p id="searchLabel">Search</p>
           </button>
         </div>
       </nav>

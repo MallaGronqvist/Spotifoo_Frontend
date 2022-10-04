@@ -8,11 +8,11 @@ body {
   margin: 0;
 }
 
-.App {
+.app {
   font-family: "Lato", sans-serif;
 }
 
-#HomePage {
+#homePage {
   grid-column: 2 / 3;
   background-color: var(--gray-darkest);
   width: 1280px;
@@ -33,7 +33,7 @@ body {
   bottom: 91.11%;
 }
 
-#NavBar {
+#navBar {
   background-color: black;
   grid-column: 1 / 2;
   left: 0;
@@ -43,7 +43,7 @@ body {
   position: fixed;
 }
 
-#HomeButton {
+#homeButton {
   background-color: transparent;
   width: Hug (84px);
   height: Hug (24px);
@@ -60,7 +60,7 @@ body {
   bottom: 84.44%;
 }
 
-#SearchButton {
+#searchButton {
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -75,7 +75,8 @@ body {
   bottom: 78.89%;
 }
 
-.Icon {
+.icon {
+  
   width: 24px;
   height: 24px;
   flex: none;
@@ -83,9 +84,12 @@ body {
   flex-grow: 0;
 }
 
-.Vector {
+.vector {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   width: 24px;
-  height: 21.34px;
+  height: 24px;
   top: 1.5px;
   position: absolute;
   left: 0%;
@@ -94,7 +98,7 @@ body {
   bottom: 4.84%;
 }
 
-#MusicPlayer {
+#musicPlayer {
   grid-column: 1 / 4;
   background-color: var(--gray-dark);
   width: 1280px;
@@ -106,7 +110,7 @@ body {
   position: fixed;
 }
 
-.Card {
+.card {
   width: 224px;
   height: 259px;
 
@@ -120,13 +124,13 @@ body {
   color: white;
 }
 
-.SongTitle {
+.songTitle {
   position: absolute;
   left: 232px;
   color: white;
 }
 
-#Card-container {
+#card-container {
   left: 232px;
   display: grid;
   grid-gap: 16px;
@@ -134,7 +138,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
 }
 
-#Artist-section {
+#artist-section {
   position: absolute;
   width: 944px;
   height: 579px;
@@ -142,7 +146,7 @@ body {
   top: 32px;
 }
 
-#CardsDiv {
+#cardsDiv {
   position: absolute;
   width: 944px;
   height: 534px;
@@ -150,9 +154,18 @@ body {
   top: 45px;
 }
 
-.Card-image {
+.card img {
   width: 192px;
   height: 192px;
   border-radius: 8px;
+}
 
+.cardTitle {
+  width: 192px;
+  height: 19px;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }

@@ -37,6 +37,6 @@ export default function CardList ({ songs }:iProps) {
     });
   };
 
-  return <div id="Card-container"> {renderArtists()} </div>;
+  return <div id="card-container"> {renderArtists()} </div>;
 };
 

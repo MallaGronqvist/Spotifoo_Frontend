@@ -1,5 +1,11 @@
+import HomeIcon from "../assets/home.svg";
+
 export default function SearchPage() {
     return (
-        <div id="Search"> This is the search page.</div>
+        <div>
+            <div id="Search"> This is the search page.</div>
+        
+        </div>
+        
     )
 }

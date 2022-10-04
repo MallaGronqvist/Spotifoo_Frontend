@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
+import SearchPage from "./components/SearchPage";
 import iSong from "./interfaces/iSong";
 
 interface iProps {
@@ -19,9 +20,11 @@ export default function App() {
   }, []);
 
   return(
+    
     <Router>
       <Routes>
         <Route path="/" element={<HomePage songs={songs}/>}/>
+        <Route path="/search" element={<SearchPage/>}/>
       </Routes>
     </Router>
   )
