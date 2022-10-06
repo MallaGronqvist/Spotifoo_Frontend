@@ -5,9 +5,10 @@ interface iProps {
   songs: iSong[]
 }
 
-export default function CardList ({ songs }:iProps) {
+export default function ArtistList ({ songs }:iProps) {
   let artists: Array<string> = [];
   let data: Array<[string, string]> = [];
+
 
   const getArtists = () => {
     songs.map((song) => {

@@ -1,15 +1,21 @@
 import Logo from "../assets/logo.png";
 import HomeIcon from "../assets/home.svg";
-import Button from "./Button";
+import SearchIcon from "../assets/search.svg"
+
+import { useNavigate } from "react-router-dom";
+
 
 export default function NavigationBar() {
-
+let navigate = useNavigate();
     return (
+
       <nav id="navBar" role="navigation" aria-label="navigation menu">
         <div className="navBackGround">
           <img className="logo" src={Logo} />
 
-          <button id="homeButton">
+          <button id="homeButton" onClick={() => {
+            navigate("/");
+          }}>
           <svg>
            
           </svg>
@@ -17,9 +23,16 @@ export default function NavigationBar() {
             
             <p id="homeLabel">Home</p>
           </button>
+         
+            
 
-          <button id="searchButton">
-            <svg className="icon"></svg>
+          <button id="searchButton" onClick={() => {
+            navigate("/search");
+          }}>
+          <svg>
+           
+           </svg>
+                  
             <p id="searchLabel">Search</p>
           </button>
         </div>

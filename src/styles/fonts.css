@@ -97,3 +97,11 @@ p {
   color: black;
 }
 
+.bannerTitle {
+  position: absolute;
+left: 28.15%;
+right: 21.67%;
+top: 70.39%;
+bottom: 10.53%;
+}
+
