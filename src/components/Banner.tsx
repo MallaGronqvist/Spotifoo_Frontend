@@ -3,12 +3,12 @@ import PlaceHolder from "../assets/picture-no-album.png";
 import iSong from "../interfaces/iSong";
 
 interface iProps {
-  songs: iSong[];
+  song: iSong;
 }
 
-export default function Banner({ songs }: iProps) {
-  let artist: string = songs[0].artist;
- const imageURL: string = "http://localhost:8080".concat(songs[0].pathToAlbum);
+export default function Banner({ song }: iProps) {
+  let artist: string = song.artist;
+ const imageURL: string = "http://localhost:8080".concat(song.pathToAlbum);
   
   return(
     <header className="banner">

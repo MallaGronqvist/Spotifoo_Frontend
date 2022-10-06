@@ -29,6 +29,7 @@ export default function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/content/:name" element={<ContentPage />} />
         </Routes>
+        <MusicPlayer pathToSong={""} />
       </Router>
     </div>
   );

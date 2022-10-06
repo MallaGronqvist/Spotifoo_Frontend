@@ -30,7 +30,7 @@ export default function ArtistList ({ songs }:iProps) {
     return data.map((artist, index) => {
       return (
         <>
-          <div key={index}>
+          <div>
             <Card key={index} title={artist[0]} pathToAlbum={artist[1]} />
           </div>
         </>

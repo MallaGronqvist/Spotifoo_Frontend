@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import iSong from "../interfaces/iSong";
 import Banner from "./Banner";
+import Table from "./Table";
 
 interface iProps {
   songs: iSong[];
@@ -29,21 +30,10 @@ export default function ContentPage() {
   return (
     <div>
       <main className="page">
-        <Banner songs={songs} />
-
-        <table className="table">
-          <tbody>
-            <tr>
-              <th>
-                {" "}
-                <p>#</p>
-              </th>
-              <th>
-                <p>TITLE</p>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+   
+        <Banner song={songs[0]} />
+        <Table songs={songs} />
+       
       </main>
     </div>
   );

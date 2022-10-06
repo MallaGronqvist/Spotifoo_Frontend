@@ -6,21 +6,21 @@ interface iProps {
 }
 export default function MusicPlayer({ pathToSong }: iProps) {
   
-  const [currentSong, setCurrentSong] = useState(pathToSong);
+  const [currentSong, setCurrentSong] = useState("http://localhost:8080".concat(pathToSong));
+
   /*
 const imageSource: string = song.pathToAlbum;
 
   const audioSource = currentSong.pathTomusic;
   const audioRef = useRef(new Audio(audioSource));
   const intervalref = useRef();
+  */
 
   useEffect(() => {
-
-    setCurrentSong(song);
+    console.log("In useEffect!")
+    setCurrentSong("http://localhost:8080".concat(pathToSong));
     
-    audioRef.current.play();
-  }, [song]);
-  */
+  }, [currentSong]);
 
   return (
     <div id="musicPlayer">
