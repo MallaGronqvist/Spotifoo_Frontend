@@ -4,10 +4,10 @@ import iSong from "../interfaces/iSong";
 
 interface iProps {
   song: iSong;
+  title: string;
 }
 
-export default function Banner({ song }: iProps) {
-  let artist: string = song.artist;
+export default function Banner({ song, title }: iProps) {
   const imageURL: string = "http://localhost:8080".concat(song.pathToAlbum);
 
   return (
@@ -17,7 +17,7 @@ export default function Banner({ song }: iProps) {
         alt="Album art"
         onError={(event) => (event.currentTarget.src = PlaceHolder)}
       />
-      <h1 className="bannerTitle">{artist}</h1>
+      <h1 className="bannerTitle">{title}</h1>
     </header>
   );
 }

@@ -17,9 +17,8 @@ export default function ContentPage({ setCurrentSong }: iProps) {
 
   const path: string = "http://localhost:8080/music/"
     .concat("?search=")
-    .concat(title)
-    .concat("&filter=artist");
-
+    .concat(title);
+   
   useEffect(() => {
     fetch(path)
       .then((response) => response.json())
@@ -35,7 +34,7 @@ export default function ContentPage({ setCurrentSong }: iProps) {
   return (
     <div>
       <main className="page">
-        <Banner song={songs[0]} />
+        <Banner song={songs[0]} title={title} />
         <Table songs={songs} setCurrentSong={setCurrentSong} />
       </main>
     </div>

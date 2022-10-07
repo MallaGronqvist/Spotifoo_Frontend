@@ -156,12 +156,20 @@ body {
   top: 32px;
 }
 
-#cardsDiv {
+#cardsDivArtist {
   position: absolute;
   width: 944px;
   height: 534px;
   left: 0px;
   top: 45px;
+}
+
+#cardsDivAlbum {
+  position: absolute;
+width: 992px;
+height: 809px;
+left: 232px;
+top: 704px;
 }
 
 .card img {
