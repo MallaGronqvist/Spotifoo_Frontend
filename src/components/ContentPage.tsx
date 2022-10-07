@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import iSong from "../interfaces/iSong";
 import Banner from "./Banner";
+import MusicPlayer from "./MusicPlayer";
 import Table from "./Table";
 
 interface iProps {
- 
-  setCurrentSong: Function;
+    setCurrentSong: Function;
 }
 
 export default function ContentPage({setCurrentSong}: iProps) {
@@ -26,15 +26,17 @@ export default function ContentPage({setCurrentSong}: iProps) {
       .then((json) => setSongs(json));
   }, []);
 
-  if (songs.length === 0) return <p>Loading</p>
+  useEffect(() => {
+    setCurrentSong(songs[0]);
+  }, []);
+
+  if (songs.length === 0) return <p>Loading</p>;
 
   return (
     <div>
       <main className="page">
-   
         <Banner song={songs[0]} />
         <Table songs={songs} setCurrentSong={setCurrentSong} />
-       
       </main>
     </div>
   );

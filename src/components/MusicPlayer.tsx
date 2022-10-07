@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import PlaceHolder from "../assets/picture-no-album.png";
+import { useEffect, useState } from "react";
 import iSong from "../interfaces/iSong";
 
 interface iProps {
@@ -7,23 +8,23 @@ interface iProps {
 
 export default function MusicPlayer({ song }: iProps) {
   const [currentSong, setCurrentSong] = useState(song);
-  const [currentURL, setCurrentURL] = useState("");
 
   useEffect(() => {
-    console.log(song);
     setCurrentSong(song);
   }, [song]);
 
-  useEffect(() => {
-    setCurrentURL("http://localhost:8080".concat(currentSong.pathTomusic));
-  }, [currentSong]);
+  function getURL(): string {
+    console.log(currentSong.pathToMusic);
+
+    return "http://localhost:8080".concat(currentSong.pathToMusic);
+  }
 
   return (
     <div id="musicPlayer">
       <div>
         <p>{currentSong.title}</p>
       </div>
-      <audio src={currentURL} controls />
+      <audio src={getURL()} controls />
     </div>
   );
 }

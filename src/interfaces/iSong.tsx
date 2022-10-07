@@ -3,6 +3,6 @@ export default interface iSong {
   title: string;
   artist: string;
   album: string;
-  pathTomusic: string;
+  pathToMusic: string;
   pathToAlbum: string;
 }

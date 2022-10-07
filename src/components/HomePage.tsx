@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import "../styles/style.css";
-import NavigationBar from "./NavigationBar";
+
 import iSong from "../interfaces/iSong";
 import ArtistList from "./ArtistList";
 
@@ -26,7 +26,7 @@ export default function HomePage({ songs }: iProps) {
           <h2 id="genres-title">Genres</h2>
         </section>
       </main>
-      
+     
     </div>
   );
 }

@@ -111,6 +111,15 @@ body {
   position: fixed;
 }
 
+#musicPlayer img {
+  width: 64px;
+height: 64px;
+}
+
+#audio {
+  left:200px;
+}
+
 .card {
   width: 224px;
   height: 259px;
@@ -236,6 +245,4 @@ body {
   left: 232px;
 }
 
-#playerButton {
-  left: 300px;
-}
+
