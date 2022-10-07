@@ -31,7 +31,7 @@ export default function App() {
         <NavigationBar />
         <Routes>
           <Route path="/" element={<HomePage songs={songs} />} />
-          <Route path="/search" element={<SearchPage />} />
+          <Route path="/search" element={<SearchPage setCurrentSong={setCurrentSong}/>} />
           <Route
             path="/content/:name"
             element={<ContentPage setCurrentSong={setCurrentSong}/>}

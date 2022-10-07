@@ -217,6 +217,11 @@ height: 64px;
   top: 16px;
 }
 
+.table img {
+  height: 64px;
+  width: 64px;
+}
+
 #tableHash {
   position: absolute;
   width: 9px;
@@ -243,6 +248,28 @@ height: 64px;
   width: 1016px;
   height: 35px;
   left: 232px;
+}
+
+#searchForm {
+  position: absolute;
+  left: 232px;
+  top: 70px;
+}
+
+#results {
+  position: absolute;
+width: 1016px;
+height: 269px;
+left: 0px;
+top: 149px;
+}
+
+#resultsTable {
+  position: absolute;
+  width: 1016px;
+height: 269px;
+left: 0px;
+top: 0px;
 }
 
 

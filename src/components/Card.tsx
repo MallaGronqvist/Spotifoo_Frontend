@@ -8,7 +8,7 @@ interface iProps {
 
 export default function Card({ title, pathToAlbum  }: iProps) {
   // Properties
-  const imageSource: string = "http://localhost:8080".concat(pathToAlbum);
+  const imageURL: string = "http://localhost:8080".concat(pathToAlbum);
   let navigate = useNavigate();
   return (
     <article
@@ -19,7 +19,7 @@ export default function Card({ title, pathToAlbum  }: iProps) {
       }}
     >
       <img
-        src={imageSource}
+        src={imageURL}
         alt="Album art"
         onError={(event) => (event.currentTarget.src = PlaceHolder)}
       />

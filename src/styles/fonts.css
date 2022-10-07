@@ -105,5 +105,17 @@ top: 70.39%;
 bottom: 10.53%;
 }
 
+#searchTitle {
+  position: absolute;
+  left: 232px;
+  top: 32px;
+}
+
+#resultsTitle {
+  position: absolute;
+  left: 232px;
+  top: 32px;
+}
+
 
 
