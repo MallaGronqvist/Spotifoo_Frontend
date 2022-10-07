@@ -1,16 +1,20 @@
+import { useRef, useState } from "react";
 import iSong from "../interfaces/iSong";
 import MusicPlayer from "./MusicPlayer";
 
 interface iProps {
   songs: iSong[];
+  setCurrentSong: Function;
 }
 
-export default function Table({ songs }: iProps): JSX.Element {
+export default function Table({ songs, setCurrentSong }: iProps): JSX.Element {  
+    
   function handleClick(song: iSong) {
-    console.log("Clicked!");
-    <MusicPlayer pathToSong={song.pathTomusic} />
+    console.log("Clicked on song:");
+    console.log(song.title)
+    setCurrentSong(song);
   }
-  
+
   return (
     <table className="table">
       <tbody>

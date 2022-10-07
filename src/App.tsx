@@ -13,12 +13,19 @@ interface iProps {
 
 export default function App() {
   const [songs, setSongs] = useState([]);
+  const [currentSong, setCurrentSong] = useState();
 
   useEffect(() => {
     fetch("http://localhost:8080/music/")
       .then((response) => response.json())
       .then((json) => setSongs(json));
   }, []);
+
+  useEffect(() => {
+    setCurrentSong(songs[0]);
+  }, []);
+
+  if (songs.length === 0) return <p>Loading</p>;
 
   return (
     <div className="app">
@@ -27,9 +34,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage songs={songs} />} />
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/content/:name" element={<ContentPage />} />
+          <Route
+            path="/content/:name"
+            element={<ContentPage setCurrentSong={setCurrentSong} />}
+          />
         </Routes>
-        <MusicPlayer pathToSong={""} />
+        <MusicPlayer song={currentSong} />
       </Router>
     </div>
   );

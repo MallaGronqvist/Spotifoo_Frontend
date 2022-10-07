@@ -5,10 +5,11 @@ import Banner from "./Banner";
 import Table from "./Table";
 
 interface iProps {
-  songs: iSong[];
+ 
+  setCurrentSong: Function;
 }
 
-export default function ContentPage() {
+export default function ContentPage({setCurrentSong}: iProps) {
   const { name } = useParams();
   const title: string = name !== undefined ? name : "";
 
@@ -32,7 +33,7 @@ export default function ContentPage() {
       <main className="page">
    
         <Banner song={songs[0]} />
-        <Table songs={songs} />
+        <Table songs={songs} setCurrentSong={setCurrentSong} />
        
       </main>
     </div>

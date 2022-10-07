@@ -2,30 +2,28 @@ import { useEffect, useRef, useState } from "react";
 import iSong from "../interfaces/iSong";
 
 interface iProps {
-  pathToSong: string
+  song: iSong;
 }
-export default function MusicPlayer({ pathToSong }: iProps) {
-  
-  const [currentSong, setCurrentSong] = useState("http://localhost:8080".concat(pathToSong));
 
-  /*
-const imageSource: string = song.pathToAlbum;
-
-  const audioSource = currentSong.pathTomusic;
-  const audioRef = useRef(new Audio(audioSource));
-  const intervalref = useRef();
-  */
+export default function MusicPlayer({ song }: iProps) {
+  const [currentSong, setCurrentSong] = useState(song);
+  const [currentURL, setCurrentURL] = useState("");
 
   useEffect(() => {
-    console.log("In useEffect!")
-    setCurrentSong("http://localhost:8080".concat(pathToSong));
-    
+    console.log(song);
+    setCurrentSong(song);
+  }, [song]);
+
+  useEffect(() => {
+    setCurrentURL("http://localhost:8080".concat(currentSong.pathTomusic));
   }, [currentSong]);
 
   return (
     <div id="musicPlayer">
-      <audio src={currentSong} controls>
-       </audio>
+      <div>
+        <p>{currentSong.title}</p>
+      </div>
+      <audio src={currentURL} controls />
     </div>
   );
 }
