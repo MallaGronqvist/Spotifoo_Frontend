@@ -11,12 +11,12 @@ interface iProps {
 
 export default function HomePage({ songs }: iProps) {
   return (
-    <div >
+    <div>
       <main className="page">
         <section id="artist-section">
           <h2 id="Artist-title">Artist</h2>
           <div id="cardsDiv">
-            <ArtistList songs={songs}/>
+            <ArtistList songs={songs} />
           </div>
         </section>
         <section>
@@ -26,7 +26,6 @@ export default function HomePage({ songs }: iProps) {
           <h2 id="genres-title">Genres</h2>
         </section>
       </main>
-     
     </div>
   );
 }

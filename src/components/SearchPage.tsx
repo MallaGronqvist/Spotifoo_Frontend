@@ -35,10 +35,9 @@ export default function SearchPage({ setCurrentSong }: iProps) {
         </form>
         <section id="results">
           <h2 id="resultsTitle">Results</h2>
-          <div id = "resultsTable">
+          <div id="resultsTable">
             <Table songs={songs} setCurrentSong={setCurrentSong} />
-            </div>
-          
+          </div>
         </section>
       </main>
     </div>

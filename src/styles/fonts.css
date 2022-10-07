@@ -108,7 +108,7 @@ p {
 #searchTitle {
   position: absolute;
   left: 232px;
-  top: 32px;
+  top: var(--space-large);
 }
 
 #resultsTitle {

@@ -6,10 +6,11 @@ interface iProps {
   pathToAlbum: string;
 }
 
-export default function Card({ title, pathToAlbum  }: iProps) {
+export default function Card({ title, pathToAlbum }: iProps) {
   // Properties
   const imageURL: string = "http://localhost:8080".concat(pathToAlbum);
   let navigate = useNavigate();
+  
   return (
     <article
       className="card"

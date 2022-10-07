@@ -2,13 +2,12 @@ import iSong from "../interfaces/iSong";
 import Card from "./Card";
 
 interface iProps {
-  songs: iSong[]
+  songs: iSong[];
 }
 
-export default function ArtistList ({ songs }:iProps) {
+export default function ArtistList({ songs }: iProps) {
   let artists: Array<string> = [];
   let data: Array<[string, string]> = [];
-
 
   const getArtists = () => {
     songs.map((song) => {
@@ -25,7 +24,7 @@ export default function ArtistList ({ songs }:iProps) {
     });
   };
 
-  function renderArtists (){
+  function renderArtists() {
     getArtists();
     return data.map((artist, index) => {
       return (
@@ -36,8 +35,7 @@ export default function ArtistList ({ songs }:iProps) {
         </>
       );
     });
-  };
+  }
 
   return <div id="card-container"> {renderArtists()} </div>;
-};
-
+}

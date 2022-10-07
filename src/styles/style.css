@@ -18,7 +18,7 @@ body {
   width: 1280px;
   height: 1945px;
   left: 0px;
-  top: 32px;
+  top: var(--space-large);
   overflow: auto;
   color: white;
 }
@@ -51,7 +51,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 16px;
+  gap: var(--space-medium);
 
   position: absolute;
   left: 16%;
@@ -68,7 +68,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 16px;
+  gap: var(--space-medium);
 
   position: absolute;
   left: 16%;

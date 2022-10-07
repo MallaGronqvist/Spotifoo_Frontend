@@ -21,8 +21,6 @@ export default function App() {
       .then((json) => setSongs(json));
   }, []);
 
-
-
   if (songs.length === 0) return <p>Loading</p>;
 
   return (
@@ -31,14 +29,16 @@ export default function App() {
         <NavigationBar />
         <Routes>
           <Route path="/" element={<HomePage songs={songs} />} />
-          <Route path="/search" element={<SearchPage setCurrentSong={setCurrentSong}/>} />
+          <Route
+            path="/search"
+            element={<SearchPage setCurrentSong={setCurrentSong} />}
+          />
           <Route
             path="/content/:name"
-            element={<ContentPage setCurrentSong={setCurrentSong}/>}
+            element={<ContentPage setCurrentSong={setCurrentSong} />}
           />
         </Routes>
         {currentSong && <MusicPlayer song={currentSong} />}
-       
       </Router>
     </div>
   );

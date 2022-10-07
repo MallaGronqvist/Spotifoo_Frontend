@@ -32,8 +32,10 @@ export default function Table({ songs, setCurrentSong }: iProps): JSX.Element {
                 />
               </td>
 
-              <td className="tableTitle">{song.title}
-              <br/> {song.album}</td>
+              <td className="tableTitle">
+                {song.title}
+                <br /> {song.album}
+              </td>
             </tr>
           );
         })}

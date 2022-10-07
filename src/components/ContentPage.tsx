@@ -6,10 +6,10 @@ import MusicPlayer from "./MusicPlayer";
 import Table from "./Table";
 
 interface iProps {
-    setCurrentSong: Function;
+  setCurrentSong: Function;
 }
 
-export default function ContentPage({setCurrentSong}: iProps) {
+export default function ContentPage({ setCurrentSong }: iProps) {
   const { name } = useParams();
   const title: string = name !== undefined ? name : "";
 
