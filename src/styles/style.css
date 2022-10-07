@@ -113,11 +113,11 @@ body {
 
 #musicPlayer img {
   width: 64px;
-height: 64px;
+  height: 64px;
 }
 
 #audio {
-  left:200px;
+  left: 200px;
 }
 
 .card {
@@ -168,6 +168,7 @@ height: 64px;
   width: 192px;
   height: 192px;
   border-radius: 8px;
+  margin: 16px;
 }
 
 .cardTitle {
@@ -178,6 +179,7 @@ height: 64px;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  margin-left: 16px;
 }
 
 .banner {
@@ -203,8 +205,8 @@ height: 64px;
 
 .table {
   position: absolute;
-  width: 1016px;
-  height: 125px;
+  width: 300px;
+  height: 300px;
   left: 232px;
   top: 352px;
 }
@@ -220,6 +222,11 @@ height: 64px;
 .table img {
   height: 64px;
   width: 64px;
+}
+
+.table imageCell {
+  height: 66px;
+  width: 66px;
 }
 
 #tableHash {
@@ -258,18 +265,16 @@ height: 64px;
 
 #results {
   position: absolute;
-width: 1016px;
-height: 269px;
-left: 0px;
-top: 149px;
+  width: 1016px;
+  height: 500px;
+  left: 0px;
+  top: 149px;
 }
 
 #resultsTable {
   position: absolute;
   width: 1016px;
-height: 269px;
-left: 0px;
-top: 0px;
+  height: 269px;
+  left: 0px;
+  top: 0px;
 }
-
-

@@ -24,7 +24,7 @@ export default function Table({ songs, setCurrentSong }: iProps): JSX.Element {
               className="tableRow"
               onClick={() => handleClick(song)}
             >
-              <td>
+              <td className="imageCell">
                 <img
                   src={"http://localhost:8080".concat(song.pathToAlbum)}
                   alt="Album art"
@@ -32,7 +32,8 @@ export default function Table({ songs, setCurrentSong }: iProps): JSX.Element {
                 />
               </td>
 
-              <td>{song.title}</td>
+              <td className="tableTitle">{song.title}
+              <br/> {song.album}</td>
             </tr>
           );
         })}

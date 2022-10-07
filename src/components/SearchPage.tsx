@@ -37,7 +37,7 @@ export default function SearchPage({ setCurrentSong }: iProps) {
           <h2 id="resultsTitle">Results</h2>
           <div id = "resultsTable">
             <Table songs={songs} setCurrentSong={setCurrentSong} />
-          </div>
+            </div>
           
         </section>
       </main>

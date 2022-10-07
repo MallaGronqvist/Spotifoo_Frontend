@@ -99,10 +99,10 @@ p {
 
 .bannerTitle {
   position: absolute;
-left: 28.15%;
-right: 21.67%;
-top: 70.39%;
-bottom: 10.53%;
+  left: 28.15%;
+  right: 21.67%;
+  top: 70.39%;
+  bottom: 10.53%;
 }
 
 #searchTitle {
@@ -117,5 +117,7 @@ bottom: 10.53%;
   top: 32px;
 }
 
-
-
+.tableTitle {
+  font-size: 14px;
+  font-weight: 400;
+}
