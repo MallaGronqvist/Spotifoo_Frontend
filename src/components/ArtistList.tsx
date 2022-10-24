@@ -9,6 +9,13 @@ export default function ArtistList({ songs }: iProps) {
   let artists: Array<string> = [];
   let data: Array<[string, string]> = [];
 
+  // Don't Repeat Yourself -1
+  /**
+   * Similar to Album list regarding the album image
+   *
+   * But most importantly why to components with very similar funcitonality:
+   * AlbumList and ArtistList
+   */
   const getArtists = () => {
     songs.map((song) => {
       if (!artists.includes(song.artist)) {

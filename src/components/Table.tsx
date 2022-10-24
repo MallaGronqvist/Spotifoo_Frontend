@@ -7,10 +7,11 @@ interface iProps {
   setCurrentSong: Function;
 }
 
+//good
 export default function Table({ songs, setCurrentSong }: iProps): JSX.Element {
   function handleClick(song: iSong) {
-    console.log("Clicked on song:");
-    console.log(song.title);
+    console.log("Clicked on song:"); // no console log on production -1
+    console.log(song.title); // no console log on production -1
     setCurrentSong(song);
   }
 

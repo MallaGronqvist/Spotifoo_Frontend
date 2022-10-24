@@ -6,6 +6,7 @@ interface iProps {
   song: iSong;
 }
 
+// good
 export default function MusicPlayer({ song }: iProps) {
   const [currentSong, setCurrentSong] = useState(song);
 

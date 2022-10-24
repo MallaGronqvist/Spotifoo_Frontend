@@ -7,8 +7,11 @@ interface iProps {
   title: string;
 }
 
+// Good
 export default function Banner({ song, title }: iProps) {
-  const imageURL: string = "http://localhost:8080".concat(song.pathToAlbum);
+  const imageURL: string = "http://localhost:8080".concat(song.pathToAlbum); // this works fine but looks very Java, we are in JS
+  // better way
+  const imageURL2: string = `http://localhost:8080/${song.pathToAlbum}`;
 
   return (
     <header className="banner">

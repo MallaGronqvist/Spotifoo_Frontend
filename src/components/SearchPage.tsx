@@ -5,6 +5,7 @@ interface iProps {
   setCurrentSong: Function;
 }
 
+// good
 export default function SearchPage({ setCurrentSong }: iProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [submitted, setSubmitted] = useState(false);

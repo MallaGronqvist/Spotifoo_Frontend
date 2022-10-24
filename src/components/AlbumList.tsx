@@ -9,6 +9,18 @@ export default function ArtistList({ songs }: iProps) {
   let albums: Array<string> = [];
   let data: Array<[string, string]> = [];
 
+  // Nesting -1
+  /**
+   * This code is complex because the planning was over complicated.
+   *
+   * Instead of the parent trying to micro manage (babysit) the cards
+   * to make sure they have an album image.
+   *
+   * The card itself should verify that it had a correct image and handle the
+   * failure scenario inside the card.
+   *
+   * Continues on the next message
+   */
   const getAlbums = () => {
     songs.map((song) => {
       if (!albums.includes(song.album)) {
@@ -24,6 +36,10 @@ export default function ArtistList({ songs }: iProps) {
     });
   };
 
+  /**
+   * Then this function does not need to call getAlbums()
+   * And can be a variable instead of a function
+   */
   function renderAlbums() {
     getAlbums();
     return data.map((album, index) => {
@@ -37,5 +53,6 @@ export default function ArtistList({ songs }: iProps) {
     });
   }
 
+  // You should not call a method inside the return renderAlbums() call a variable instead
   return <div id="card-container"> {renderAlbums()} </div>;
 }

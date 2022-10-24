@@ -10,6 +10,7 @@ interface iProps {
   songs: iSong[];
 }
 
+// good
 export default function HomePage({ songs }: iProps) {
   return (
     <div>
@@ -22,7 +23,7 @@ export default function HomePage({ songs }: iProps) {
         </section>
         <section>
           <h2 id="albums-title">Albums</h2>
-                    <div id="cardsDivAlbum">
+          <div id="cardsDivAlbum">
             <AlbumList songs={songs} />
           </div>
         </section>

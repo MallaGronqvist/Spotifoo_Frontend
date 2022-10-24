@@ -18,7 +18,14 @@ export default function ContentPage({ setCurrentSong }: iProps) {
   const path: string = "http://localhost:8080/music/"
     .concat("?search=")
     .concat(title);
-   
+
+  /**
+   * You should have a separate method called onSuccess() that handle:
+   * 1. setSongs
+   * 2. setCurrentSong
+   * in a single method instead of using 2 separate useEffect. Having multiple useEffect is 
+   * a recipe for causing weird bugs inside React
+   */
   useEffect(() => {
     fetch(path)
       .then((response) => response.json())

@@ -3,6 +3,7 @@ import HomeIcon from "../assets/home.svg";
 
 import { useNavigate } from "react-router-dom";
 
+// good
 export default function NavigationBar() {
   let navigate = useNavigate();
   return (

@@ -7,6 +7,7 @@ import NavigationBar from "./components/NavigationBar";
 import SearchPage from "./components/SearchPage";
 import iSong from "./interfaces/iSong";
 
+// Interface not used -1
 interface iProps {
   songs: iSong[];
 }
@@ -19,6 +20,7 @@ export default function App() {
     fetch("http://localhost:8080/music/")
       .then((response) => response.json())
       .then((json) => setSongs(json));
+    // catch for handling error is missing
   }, []);
 
   if (songs.length === 0) return <p>Loading</p>;
